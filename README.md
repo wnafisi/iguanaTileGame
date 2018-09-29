@@ -19,32 +19,33 @@ Built with React.
 Below is a snippet from './Game.jsx':
 
 ```
-swapEmptyTileWithTileId(tileId) {
-        const random = this.state.randomizedValues
-        const index = random.indexOf(tileId);
-        const zero = random.indexOf(0);
-        const imgTiles = document.querySelectorAll(".board img")
-        const indexImg = imgTiles[index]
-        const self = this
+        swapEmptyTileWithTileId(tileId) {
+                const random = this.state.randomizedValues
+                const index = random.indexOf(tileId);
+                const zero = random.indexOf(0);
+                const imgTiles = document.querySelectorAll(".board img")
+                const indexImg = imgTiles[index]
+                const self = this
 
-        indexImg.addEventListener('animationend', function() {
-            self.removeClasses(tileId);
-        });
-        
-        if (zero === 0 && index === 1 
-            || zero === 1 && index === 2
-            || zero === 3 && index === 4
-            || zero === 4 && index === 5
-            || zero === 6 && index === 7
-            || zero === 7 && index === 8) {
-            indexImg.className = "move-left";
-        }
-        
-        if (index !== -1) {
-            random[index] = 0;
-        }
-        if (zero !== -1) {
-            random[zero] = tileId
+                indexImg.addEventListener('animationend', function() {
+                    self.removeClasses(tileId);
+                });
+
+                if (zero === 0 && index === 1 
+                    || zero === 1 && index === 2
+                    || zero === 3 && index === 4
+                    || zero === 4 && index === 5
+                    || zero === 6 && index === 7
+                    || zero === 7 && index === 8) {
+                    indexImg.className = "move-left";
+                }
+
+                if (index !== -1) {
+                    random[index] = 0;
+                }
+                if (zero !== -1) {
+                    random[zero] = tileId
+                }
         }
 ```
 
