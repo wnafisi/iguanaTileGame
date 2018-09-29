@@ -1,5 +1,5 @@
 # Iguana Tile Game
-A take on the classic image tile game. Move the tiles around the board by clicking on tiles directly adjacent to the white space...
+A take on the classic image tile game. Move tiles around the board by clicking on the tiles directly adjacent to the empty space...
 
 here's a link to the current app, (deployed on Heroku): [Iguana Tile Game](https://desolate-beyond-10749.herokuapp.com/)
 
