@@ -39,9 +39,16 @@ swapEmptyTileWithTileId(tileId) {
             || zero === 7 && index === 8) {
             indexImg.className = "move-left";
         }
+        
+        if (index !== -1) {
+            random[index] = 0;
+        }
+        if (zero !== -1) {
+            random[zero] = tileId
+        }
 ```
 
-When a user clicks on an image-tile, a variable, 'index' gets assigned the value of the index of that image-tile's postion within the randomizedValues array. The index position of the zero or empty image-tile gets assigned to variable: zero. Now the tile position, regardless of its image, gets assigned a slide animation that slides the image-tile towards the empty or zero image-tile. The 'if else' statement handles what direction of animation slide should be applied to the index tile position in relation to the zero tile position- either sliding up, down, right, or left. Finally, once the animation ends, a callback function removes the animation class from the clicked tile.
+When a user clicks on an image-tile, a variable, 'index' gets assigned the value of the index of that image-tile's postion within the randomizedValues array. The index position of the zero or empty image-tile gets assigned to variable: zero. Now the tile position, regardless of its image, gets assigned a slide animation that slides the image-tile towards the empty or zero image-tile. The 'if else' statement handles what direction of animation slide should be applied to the index tile position in relation to the zero tile position- either sliding up, down, right, or left. The bottom two 'if else' statements switch the value of the respective image-tile positions. Finally, once the animation ends, a callback function removes the animation class from the clicked tile.
 
 ## How to install?
 * Fork and/or clone this repo
